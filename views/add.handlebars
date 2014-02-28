@@ -28,17 +28,18 @@
     <a class="w-inline-block link_buttons" href="dashboard.handlebars">
       <img class="home_button" src="images/logo.png" width="150" alt="530f7159a531aa3203000125_logo.png">
     </a>
+    <a class="w-inline-block link_buttons" href="/">
+      <img class="bottom_buttons" style="float: right" src="images/logout.png" alt="logout" width="40" height="40">
+    </a>
   </div>
   <div></div>
   <img class="add_screen" src="images/add.png" width="250" height="250" alt="530f6c22a531aa32030000da_add.png">
   <h1>Add a Task</h1>
   <div class="w-form">
     <form name="email-form" role="form" method="get" action="add">
-      <label class="form_names" for="name">Task Name</label>
-      <input class="w-input form_field" type="text" placeholder="Enter the Task Name" name="taskname" data-name="taskname" required="required"></input>
-      <label class="form_names">User</label>
       
       
+        <label class="form_names">User</label>
       <!-- Insert handlebars for users here -->
       <select class="w-select user_drop" name="id" data-name"id" required="required">
         <option value="">Select one...</option>
@@ -46,6 +47,10 @@
         <option value="{{id}}">{{name}}</option>
           {{/each}}
       </select>
+        
+        <label class="form_names" for="name">Task Name</label>
+      <input class="w-input form_field" type="text" placeholder="Enter the Task Name" name="taskname" data-name="taskname" required="required"></input>
+    
       
       <button class="button w-button login_submit" type="submit" value="addtask" data-wait="Please wait...">Submit</button>
     <div class="w-form-done">
@@ -56,9 +61,6 @@
     </div>
   </div>
   <footer class="bottomdiv">
-    <a class="w-inline-block link_buttons" href="/">
-      <img class="bottom_buttons" src="images/logout.png" alt="logout" width="40" height="40">
-    </a>
     <a class="w-inline-block link_buttons" href="add.handlebars">
       <img class="bottom_buttons" src="images/add.png" width="60" height="60" alt="530f6c22a531aa32030000da_add.png">
     </a>

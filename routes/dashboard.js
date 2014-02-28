@@ -53,6 +53,8 @@ exports.addTask = function(req, res) {
     data.Home[0].Members[userid].Tasks.push(blah);
     
     console.log(data.Home[0].Members[userid].Tasks);
+    
+     res.render('dashboard', data.Home[0]);
 }
 
 exports.removeTask = function(req, res) {

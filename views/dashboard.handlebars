@@ -28,7 +28,12 @@
     <a class="w-inline-block link_buttons" href="dashboard.handlebars">
       <img class="home_button" src="images/logo.png" width="150" alt="530f7159a531aa3203000125_logo.png">
     </a>
+    <a class="w-inline-block link_buttons" style="float: right" href="/">
+      <img class="bottom_buttons" src="images/logout.png" alt="logout" width="40" height="40">
+    </a>
   </div>
+    
+    <h3>Your Group's Tasklist</h3>
     <form name="taskform" role="form" method="get" action="removeTask">
     {{#each Members}}
   <div class="user_tasklist">
@@ -51,9 +56,6 @@
   </div>
     {{/each}}
   <footer class="bottomdiv">
-    <a class="w-inline-block link_buttons" href="/">
-      <img class="bottom_buttons" src="images/logout.png" alt="logout" width="40" height="40">
-    </a>
     <a class="w-inline-block link_buttons" href="add.handlebars">
       <img class="bottom_buttons" src="images/add.png" width="60" height="60" alt="530f6c22a531aa32030000da_add.png">
     </a>
