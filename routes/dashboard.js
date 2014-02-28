@@ -6,10 +6,7 @@ exports.view = function(req, res) {
 	if(!req.session.userID || req.session.userID == -1){
 		res.render('./index');
 	}
-        var el = document.getElementById('remove');
-    el.onclick = removeTask;
     
-//console.log(req.session.userID);
         res.render('dashboard', data.Home[0]);
     
 }
@@ -38,27 +35,32 @@ exports.addTask = function(req, res) {
     
     console.log("Chore = " + newTask + " Roomie = " +  userid);
     
+    
+    //Grab name of user 
+    for(var k = 0; k < data.Home[0].Members.length; k++)
+    {
+        if(k == userid){
+            var username = data.Home[0].Members[k].name;
+        }
+    }
+
     var blah = {
             "taskid": data.Home[0].Members[userid].Tasks.length,
-            "taskname": newTask
+            "taskname": newTask,
+            "ownerid": userid
     }
     
     data.Home[0].Members[userid].Tasks.push(blah);
     
-    
-    
-   // console.log( data.Home[0].Members[userid].Tasks);
+    console.log(data.Home[0].Members[userid].Tasks);
 }
 
 exports.removeTask = function(req, res) {
     
-    var n = req.query.name;
-    var v = req.query.value;
-    var i = req.query.id;
+    var userid = req.query.ownerid;
+    var choreid = req.query.id;
     
-    console.log(n);
-    console.log(v);
-    console.log(i);
+    delete data.Home[0].Members[userid].Tasks[choreid];
     
     res.render('dashboard', data.Home[0]);
 }

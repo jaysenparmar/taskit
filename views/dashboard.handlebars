@@ -29,6 +29,7 @@
       <img class="home_button" src="images/logo.png" width="150" alt="530f7159a531aa3203000125_logo.png">
     </a>
   </div>
+    <form name="taskform" role="form" method="get" action="removeTask">
     {{#each Members}}
   <div class="user_tasklist">
     <div>
@@ -38,8 +39,10 @@
     <div class="w-clearfix">
     <div class="task">{{taskname}}<br> 
      <form name="taskform" role="form" method="get" action="removeTask">
-                  <input class="w-input forminputs" type="text" placeholder={{taskname}} name={{taskname}} data-name="{{taskname}}" value={{taskid}} id={{taskid}}></input>
-                  <button value={{taskid}} name={{taskname}} type="submit">Remove</button>
+                  <input style="display:none" class="w-input forminputs" type="text" placeholder={{taskname}} name="id" data-name="{{taskname}}" value={{taskid}} id={{taskid}}></input>
+         <input style="display:none"  class="w-input forminputs" type="text" placeholder={{ownerid}} name="ownerid" data-name="{{ownerid}}" value={{ownerid}} id="{{ownerid}}"></input>
+        
+                  <button type="submit" value="Login" data-wait="Please wait...">Remove</button>
      </form>
    </div> 
     </div>

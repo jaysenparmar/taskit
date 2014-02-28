@@ -12,11 +12,13 @@
                             "Tasks": [
                                 {
                                     "taskid": 0,
-                                    "taskname": "Pay bills"
+                                    "taskname": "Pay bills",
+                                    "ownerid": 0
                                 },
                                 {
                                     "taskid": 1,
-                                    "taskname": "Replace bathroom lightbulbs"
+                                    "taskname": "Replace bathroom lightbulbs",
+                                    "ownerid": 0
                                 }
                             ]
                     },
@@ -28,11 +30,13 @@
                             "Tasks": [
                                 {
                                     "taskid": 0,
-                                    "taskname": "Clean the garage"
+                                    "taskname": "Clean the garage",
+                                    "ownerid": 1
                                 },
                                 {
                                     "taskid": 1,
-                                    "taskname": "Feed the fish"
+                                    "taskname": "Feed the fish",
+                                    "ownerid": 1
                                 }
                             ]
                     },
@@ -44,11 +48,13 @@
                             "Tasks": [
                                 {
                                     "taskid": 0,
-                                    "taskname": "Clean living room"
+                                    "taskname": "Clean living room",
+                                    "ownerid": 2
                                 },
                                 {
                                     "taskid": 1,
-                                    "taskname": "Take out the trash"
+                                    "taskname": "Take out the trash",
+                                    "ownerid": 2
                                 }
                             ]
                     }
