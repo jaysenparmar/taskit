@@ -1,5 +1,6 @@
 var data = require("../data.json");
 
-exports.addFriend = function(req, res) {    
-	// Your code goes here
- }
+exports.view = function(req, res){
+    console.log('Rendering add');
+	res.render('add');
+}

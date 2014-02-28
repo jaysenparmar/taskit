@@ -25,7 +25,7 @@
 </head>
 <body>
   <div class="topdiv">
-    <a class="w-inline-block link_buttons" href="dashboard.html">
+    <a class="w-inline-block link_buttons" href="dashboard.handlebars">
       <img class="home_button" src="images/logo.png" width="150" alt="530f7159a531aa3203000125_logo.png">
     </a>
   </div>
@@ -37,26 +37,28 @@
       <label class="form_names" for="name">Task Name</label>
       <input class="w-input form_field" type="text" placeholder="Enter the Task Name" name="name" data-name="Name" required="required"></input>
       <label class="form_names">User</label>
+      
+      <!-- Insert handlebars for users here -->
       <select class="w-select user_drop" name="dropdown" required="required">
         <option value="">Select one...</option>
-        <option value="First">First Choice</option>
-        <option value="Second">Second Choice</option>
-        <option value="Third">Third Choice</option>
+        <option value="First">User 1</option>
+        <option value="Second">User 2</option>
+        <option value="Third">User 3</option>
       </select>
       <input class="w-button add_submit" type="submit" value="Submit" data-wait="Please wait..."></input>
     </form>
     <div class="w-form-done">
-      <p>Thank you! Your submission has been received!</p>
+      <p>Thank you! This task has been successfully added!</p>
     </div>
     <div class="w-form-fail">
       <p>Oops! Something went wrong while submitting the form :(</p>
     </div>
   </div>
   <footer class="bottomdiv">
-    <a class="w-inline-block link_buttons" href="index.html">
+    <a class="w-inline-block link_buttons" href="/">
       <img class="bottom_buttons" src="images/logout.png" alt="logout" width="40" height="40">
     </a>
-    <a class="w-inline-block link_buttons" href="add.html">
+    <a class="w-inline-block link_buttons" href="add.handlebars">
       <img class="bottom_buttons" src="images/add.png" width="60" height="60" alt="530f6c22a531aa32030000da_add.png">
     </a>
   </footer>
