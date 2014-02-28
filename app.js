@@ -39,11 +39,13 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/login', dashboard.login);
 app.get('/dashboard.handlebars', dashboard.view);
 app.get('/add.handlebars', add.view);
 app.get('/about.handlebars', about.view);
 app.get('/sign-up.handlebars', signup.view);
-app.get('/forgotpassword.handlebars', fpass.view);
+app.get('/add', dashboard.addTask);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

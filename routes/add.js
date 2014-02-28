@@ -1,6 +1,13 @@
-var data = require("../data.json");
+var data = require('../data.json');
+
+
+//CORNER CASES _ duplicates Need confirmation
 
 exports.view = function(req, res){
-    console.log('Rendering add');
-	res.render('add');
+
+	res.render('add', data.Home[0]);
 }
+
+
+
+

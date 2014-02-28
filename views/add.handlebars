@@ -33,20 +33,21 @@
   <img class="add_screen" src="images/add.png" width="250" height="250" alt="530f6c22a531aa32030000da_add.png">
   <h1>Add a Task</h1>
   <div class="w-form">
-    <form name="email-form" data-name="Email Form">
+    <form name="email-form" role="form" method="get" action="add">
       <label class="form_names" for="name">Task Name</label>
-      <input class="w-input form_field" type="text" placeholder="Enter the Task Name" name="name" data-name="Name" required="required"></input>
+      <input class="w-input form_field" type="text" placeholder="Enter the Task Name" name="taskname" data-name="taskname" required="required"></input>
       <label class="form_names">User</label>
       
+      
       <!-- Insert handlebars for users here -->
-      <select class="w-select user_drop" name="dropdown" required="required">
+      <select class="w-select user_drop" name="id" data-name"id" required="required">
         <option value="">Select one...</option>
-        <option value="First">User 1</option>
-        <option value="Second">User 2</option>
-        <option value="Third">User 3</option>
+          {{#each Members}}
+        <option value="{{id}}">{{name}}</option>
+          {{/each}}
       </select>
-      <input class="w-button add_submit" type="submit" value="Submit" data-wait="Please wait..."></input>
-    </form>
+      
+      <button class="button w-button login_submit" type="submit" value="addtask" data-wait="Please wait...">Submit</button>
     <div class="w-form-done">
       <p>Thank you! This task has been successfully added!</p>
     </div>

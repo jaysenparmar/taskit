@@ -29,16 +29,18 @@
       <img class="home_button" src="images/logo.png" width="150" alt="530f7159a531aa3203000125_logo.png">
     </a>
   </div>
+    {{#each Members}}
   <div class="user_tasklist">
     <div>
-      <h2>User 1</h2>
+      <h2>{{name}}</h2>
     </div>
+      {{#each Tasks}}
     <div class="w-clearfix">
-      <div class="task">This is a task for User 1</div>
-      <div class="task">This is another task for User 1</div>
-      <div class="task">This is yet another task</div>
+      <div class="task">{{taskname}}</div>
     </div>
+      {{/each}}
   </div>
+    {{/each}}
   <footer class="bottomdiv">
     <a class="w-inline-block link_buttons" href="/">
       <img class="bottom_buttons" src="images/logout.png" alt="logout" width="40" height="40">
