@@ -1,11 +1,15 @@
 // Get all of our friend data
 var data = require('../data.json');
+var fs = require('fs');
 
 exports.view = function(req, res) { 
 	if(!req.session.userID || req.session.userID == -1){
 		res.render('./index');
 	}
-	console.log(req.session.userID);
+        var el = document.getElementById('remove');
+    el.onclick = removeTask;
+    
+//console.log(req.session.userID);
         res.render('dashboard', data.Home[0]);
     
 }
@@ -43,49 +47,18 @@ exports.addTask = function(req, res) {
     
     
     
-    console.log( data.Home[0].Members[userid].Tasks);
+   // console.log( data.Home[0].Members[userid].Tasks);
+}
 
+exports.removeTask = function(req, res) {
     
-    /*
-    var userid4chore;
-    var userpicture4chore;
+    var n = req.query.name;
+    var v = req.query.value;
+    var i = req.query.id;
     
-    
-    for(var i = 0; i < data.Home[0].Members.length; i++){
-		if(data.Roommates[i].user == roommate4chore) {
-			userid4chore = data.Roommates[i].id;
-            userpicture4chore = data.Roommates[i].userpicture;
-		}	
-
-    }
-    
-    var chorename
-    var choreimage;
-    var chorepoints;
-            
-    for(var i = 0; i < data.chores.length; i++){
-		if(data.chores[i].name == newchore) {
-            chorename = data.chores[i].name;
-			choreimage = data.chores[i].imageURL;
-            chorepoints = data.chores[i].points;
-		}	
-
-    }
-    
-    	var newChore = {
-                    "name": chorename,
-					"userpicture": userpicture4chore,
-                    "id": userid4chore,
-                    "imageURL": choreimage,
-                    "points": chorepoints
-					};
-    
-    console.log(userid4chore);
-    
-     data.Roommates[userid4chore].userchores.push(newChore);
+    console.log(n);
+    console.log(v);
+    console.log(i);
     
     res.render('dashboard', data.Home[0]);
-
-   data.Roommates.[user].push(newChore); */
-
 }

@@ -36,8 +36,14 @@
     </div>
       {{#each Tasks}}
     <div class="w-clearfix">
-      <div class="task">{{taskname}}</div>
+    <div class="task">{{taskname}}<br> 
+     <form name="taskform" role="form" method="get" action="removeTask">
+                  <input class="w-input forminputs" type="text" placeholder={{taskname}} name={{taskname}} data-name="{{taskname}}" value={{taskid}} id={{taskid}}></input>
+                  <button value={{taskid}} name={{taskname}} type="submit">Remove</button>
+     </form>
+   </div> 
     </div>
+       
       {{/each}}
   </div>
     {{/each}}

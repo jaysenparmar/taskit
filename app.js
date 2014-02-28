@@ -45,6 +45,7 @@ app.get('/add.handlebars', add.view);
 app.get('/about.handlebars', about.view);
 app.get('/sign-up.handlebars', signup.view);
 app.get('/add', dashboard.addTask);
+app.get('/removeTask', dashboard.removeTask);
 
 
 http.createServer(app).listen(app.get('port'), function(){
